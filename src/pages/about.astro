@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SkillTag from '../components/SkillTag.astro';
+import { Image } from 'astro:assets';
+import headshot from '../assets/headshot.jpg';
+
+const coreSkills = [
+  'Content Strategy', 'UX Writing', 'Voice & Tone', 'Content Systems',
+  'Cross-Functional Collaboration', 'Data-Driven Decisions', 'Content Auditing',
+  'Stakeholder Management', 'User Research Integration', 'Information Architecture',
+  'AI/LLM Collaboration', 'Experimentation & A/B Testing', 'Conversion Optimization',
+  'Financial Services', 'Brand Strategy',
+];
+
+const metrics = [
+  { project: 'Proactive Intervention', metric: 'Annualized revenue', result: '$5M' },
+  { project: 'Proactive Intervention', metric: 'CTR improvement', result: '3.5x' },
+  { project: 'Proactive Intervention', metric: 'Resolution rate', result: '+7%' },
+  { project: 'CKM Splash / Contract 1', metric: 'CTR improvement', result: '17% → 32%' },
+  { project: 'CKM Splash / Contract 1', metric: 'Incremental filings', result: '52K' },
+  { project: 'CKM Splash / Contract 1', metric: 'YoY unit growth', result: '5X to 313K' },
+  { project: 'Expert Final Review', metric: 'Annualized revenue', result: '$1.8M' },
+  { project: 'CKM Splash', metric: 'CTA optimization', result: '+10% filing starts' },
+];
+---
+
+<BaseLayout title="About — Holly Zorbas" description="Senior content designer who builds systems, not just screens.">
+  <section class="section">
+    <div class="about-grid">
+      <Image
+        src={headshot}
+        alt="Holly Zorbas"
+        width={520}
+        height={693}
+        class="about-photo"
+      />
+      <div>
+        <h1>about me</h1>
+        <div class="prose" style="margin-top: var(--space-6);">
+          <p>
+            i like to understand the problem before i write anything. who's reading this? what are they nervous about? what do they already know? that usually means i'm deep in research, user data, or a whiteboard session before a single word hits the screen.
+          </p>
+          <p>
+            over several contract engagements at intuit — across credit karma, turbotax, and the intuit assist ai platform — i worked on cross-product experiences where the content had to do real work: reduce confusion, build trust, move people through complex flows. a few of those projects drove measurable revenue. most of them changed how the teams around me thought about content.
+          </p>
+          <p>
+            more recently, i've been working closer to ai. i collaborated with intuit's ai team on prompt iteration and human review for personalized content, and i wrote a strategy proposal for how content should behave across different ai agent states. it's a space i want to keep growing in.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" style="padding-top: 0;">
+    <h2>skills</h2>
+    <div class="skills-grid">
+      {coreSkills.map((s) => <SkillTag label={s} />)}
+    </div>
+  </section>
+
+  <!-- Metrics -->
+  <section class="section" style="padding-top: 0;">
+    <h2>key metrics</h2>
+    <table class="metrics-table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Metric</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        {metrics.map((m) => (
+          <tr>
+            <td>{m.project}</td>
+            <td>{m.metric}</td>
+            <td>{m.result}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Growth Areas -->
+  <section class="section" style="padding-top: 0;">
+    <h2>growth areas</h2>
+    <div class="prose">
+      <p>
+        i'd rather be honest about where my experience is strong and where it isn't.
+      </p>
+      <p>
+        <strong>accessibility and inclusive design</strong> — i've worked within accessible design systems, but i haven't led wcag compliance or section 508 efforts as standalone work. i'd welcome the chance to go deeper here.
+      </p>
+      <p>
+        <strong>localization</strong> — all of my work has been english/us. designing for global audiences and translation workflows is something i'd pick up quickly.
+      </p>
+      <p>
+        <strong>mentoring</strong> — i've mentored informally but haven't documented it well. working on that.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" style="padding-top: 0;" id="contact">
+    <h2>get in touch</h2>
+    <div class="prose">
+      <p>
+        interested in working together? i'd love to hear from you.
+      </p>
+      <p>
+        <a href="mailto:hollyzorbas@gmail.com">email</a> &middot;
+        <a href="https://linkedin.com/in/hollyzorbas" target="_blank" rel="noopener">linkedin</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

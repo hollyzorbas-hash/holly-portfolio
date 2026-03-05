@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SkillTag from '../components/SkillTag.astro';
+import { Image } from 'astro:assets';
+import imgProactiveIntervention from '../assets/projects/proactive-intervention.png';
+import imgCktaxVoiceTone from '../assets/projects/cktax-voice-tone.png';
+import imgCkmHeartbreakers from '../assets/projects/thumbnail-heartbreaker.png';
+import imgSplash from '../assets/projects/thumbnail-splash.png';
+import imgEfr from '../assets/projects/thumbnail-efr.png';
+
+const tier1Projects = [
+  {
+    slug: 'proactive-intervention',
+    company: 'TurboTax / Intuit',
+    title: 'Proactive Intervention',
+    tagline: 'AI-personalized expert help that drove $5M in annualized revenue and 3.5x CTR improvement.',
+    skills: ['Content Strategy', 'AI Collaboration', 'Experimentation', 'Data-Driven Decisions'],
+    image: imgProactiveIntervention,
+  },
+  {
+    slug: 'cktax-voice-tone',
+    company: 'Credit Karma Tax / Intuit',
+    title: 'CKTax Voice & Tone',
+    tagline: 'A comprehensive voice, tone, and content principles system for a cross-product tax filing experience.',
+    skills: ['Voice & Tone', 'Content Systems', 'Brand Strategy', 'Workshop Facilitation'],
+    image: imgCktaxVoiceTone,
+  },
+];
+
+const quickWins = [
+  { slug: 'expert-final-review', title: 'Expert Final Review', company: 'TurboTax', tagline: 'Three copy variants testing persuasion strategies — $1.8M annualized revenue.', skills: ['Experimentation', 'UX Writing'], image: imgEfr },
+  { slug: 'ckm-heartbreakers', title: 'CKM Heartbreakers', company: 'Credit Karma Money', tagline: 'Comparison modal that saved product take rates from mid-funnel mind-changers.', skills: ['Experimentation', 'Conversion Optimization'], image: imgCkmHeartbreakers },
+  { slug: 'splash-postfile', title: 'Splash + Post-file pages', company: 'Credit Karma Money', tagline: 'Cross-product landing page optimization — 5X growth, 52K incremental filings.', skills: ['Data-Driven Decisions', 'Conversion Optimization'], image: imgSplash },
+  { slug: 'dynamic-island', title: 'Dynamic Island', company: 'TurboTax iOS', tagline: 'iOS Dynamic Island notification content across six expert-progress states.', skills: ['UX Writing', 'Interaction Design'] },
+  { slug: 'creditdonkey', title: 'Finance Editorial Work', company: 'CreditDonkey.com', tagline: 'Placeholder description — update with your own copy.', skills: ['Editorial', 'Finance'] },
+  { slug: 'st-baldricks', title: 'Nonprofit Copywriting for Web + Print', company: 'St. Baldricks Foundation', tagline: 'Placeholder description — update with your own copy.', skills: ['Copywriting', 'Nonprofit'] },
+];
+---
+
+<BaseLayout title="Holly Zorbas — Senior Content Designer">
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-label">holly zorbas · senior content designer</p>
+    <h1 class="hero-statement">i make strategic content decisions in <span class="rotating-word" id="rotating-word">ambiguous</span> spaces</h1>
+    <p class="hero-intro">
+      and i do my best work when finding the sweet spot between user needs and business goals is a bit of a challenge. most recently, i spent 3.5 years at intuit working across credit karma and turbotax where i built content systems, ran experiments, and helped teams tie what we write to what actually moves the numbers.
+    </p>
+  </section>
+
+  <!-- Selected Outcomes -->
+  <section class="hero-outcomes">
+    <p class="hero-outcomes-label">selected outcomes</p>
+    <div class="hero-outcomes-grid">
+      <div class="hero-outcome">
+        <p class="hero-outcome-value">$5M</p>
+        <p class="hero-outcome-desc">annualized revenue from AI-personalized expert help</p>
+      </div>
+      <div class="hero-outcome">
+        <p class="hero-outcome-value">+7%</p>
+        <p class="hero-outcome-desc">increase in customer resolution from help content</p>
+      </div>
+      <div class="hero-outcome">
+        <p class="hero-outcome-value">2.6M</p>
+        <p class="hero-outcome-desc">churned and 90+ day inactive customers reactivated</p>
+      </div>
+      <div class="hero-outcome">
+        <p class="hero-outcome-value">$1.2M</p>
+        <p class="hero-outcome-desc">annualized revenue from improved benefit content</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work -->
+  <section class="section" id="work">
+    <h2 style="margin-bottom: var(--space-8);">featured work</h2>
+    <div class="project-grid-featured">
+      {tier1Projects.map((project) => (
+        <a href={`/work/${project.slug}`} class="project-card-featured">
+          <div class="project-card-image">
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={800}
+              densities={[1, 2]}
+            />
+          </div>
+          <div class="project-card-content">
+            <p class="project-card-company">{project.company}</p>
+            <h3 class="project-card-title">{project.title}</h3>
+            <p class="project-card-tagline">{project.tagline}</p>
+            <div class="project-card-skills">
+              {project.skills.map((s) => <SkillTag label={s} />)}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Quick Content Wins -->
+  <section class="section" style="padding-top: 0;">
+    <h2 style="margin-bottom: var(--space-8);">quick content wins, editorial + more</h2>
+    <div class="project-grid-visual">
+      {quickWins.map((project) => (
+        <a href={`/work/${project.slug}`} class="project-card-visual">
+          <div class="project-card-visual-image">
+            {project.image && <Image src={project.image} alt={project.title} width={400} densities={[1, 2]} />}
+          </div>
+          <div class="project-card-visual-content">
+            {project.company && <p class="project-card-company">{project.company}</p>}
+            <h3 class="project-card-title">{project.title}</h3>
+            <p class="project-card-tagline">{project.tagline}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const words = ['ambiguous', 'constraint-heavy', 'fast-paced', 'compliance-driven', 'high-stakes'];
+  let currentIndex = 0;
+  const element = document.getElementById('rotating-word');
+  const typingSpeed = 80;
+  const deleteSpeed = 50;
+  const pauseBetween = 1800;
+
+  async function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function typeWord(word) {
+    for (let i = 0; i <= word.length; i++) {
+      element.textContent = word.slice(0, i);
+      await sleep(typingSpeed);
+    }
+  }
+
+  async function deleteWord() {
+    const current = element.textContent;
+    for (let i = current.length; i >= 0; i--) {
+      element.textContent = current.slice(0, i);
+      await sleep(deleteSpeed);
+    }
+  }
+
+  async function cycle() {
+    if (!element) return;
+
+    while (true) {
+      await sleep(pauseBetween);
+      await deleteWord();
+      currentIndex = (currentIndex + 1) % words.length;
+      await typeWord(words[currentIndex]);
+    }
+  }
+
+  cycle();
+</script>

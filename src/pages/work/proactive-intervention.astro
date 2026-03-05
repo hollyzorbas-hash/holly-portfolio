@@ -1,0 +1,714 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import variantsImage from '../../assets/projects/pint-variants.png';
+import previousTestsImage from '../../assets/projects/pint-previous-tests.png';
+import principlesImage from '../../assets/projects/pint-principles.png';
+import twoLevelImage from '../../assets/projects/pint-2level.png';
+import refinementImage from '../../assets/projects/pint-refinement.png';
+import heroImage from '../../assets/projects/pint-hero.png';
+import templatesImage from '../../assets/projects/pint-templates.png';
+---
+
+<BaseLayout
+  title="Proactive Intervention — Holly Zorbas"
+  description="AI-personalized expert help that drove $5M in annualized revenue for TurboTax."
+>
+  <article class="case-study">
+    <!-- Hero -->
+    <header class="case-study-hero">
+      <a href="/#work" class="case-study-back">&larr; back to work</a>
+      <p class="case-study-name">Proactive Intervention</p>
+      <h1>Turning customer anxiety into opportunities for delightful expert assistance (and $5M in revenue)</h1>
+
+      <!-- Metadata -->
+      <div class="case-study-meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Lead Content Designer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <span class="meta-value">Design, AI/ML, Engineering, Tax Compliance, Legal</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <span class="meta-value">5 Months</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Company</span>
+          <span class="meta-value">Intuit (TurboTax)</span>
+        </div>
+      </div>
+
+      <!-- Jump to -->
+      <nav class="jump-to">
+        <span class="jump-to-label">Jump to:</span>
+        <a href="#strategy">Content strategy</a>
+        <a href="#ai-collaboration">AI collaboration</a>
+        <a href="#impact">Impact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="case-study-hero-image">
+      <Image src={heroImage} alt="Proactive intervention cards in the TurboTax experience" width={1200} densities={[1, 2]} />
+      <p class="image-caption">Examples of the finalized Proactive Intervention help offer cards</p>
+    </div>
+
+    <!-- The Challenge & My Role -->
+    <section class="case-study-section">
+      <div class="two-column">
+        <div class="column-text">
+          <h2 class="section-title">The challenge</h2>
+          <p>
+            The main value prop of TurboTax Live Assisted, <b>unlimited expert help as you file</b>, had a utilization problem. Customers chose the product specifically for expert support, but data showed that many were struggling through complex tax topics and <b>dropping off instead of reaching out</b>.</p> 
+            <p>But previous "need help?" messages had failed to move the needle.
+          </p>
+          <p>
+            Leadership's hypothesis was that AI personalization could drive engagement and bridge the gap between customers and experts. Our team's job was to figure out what that looked like.
+          </p>
+        </div>
+        <div class="column-text">
+          <h2 class="section-title">My role</h2>
+          <p>
+            As the only content designer on this track, I worked closely with the AI team to <b>define how to personalize content effectively and responsibly</b>. This meant creating the content strategy, voice principles, and testing framework that could prove personalization's value.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Failed Before -->
+    <section class="case-study-section">
+      <h2 class="section-title">What failed before and why</h2>
+      <div class="two-column">
+        <div class="column-text">
+          <p>
+            Previous tests failed for a few reasons. Because the help offer appeared either as a top-right toast or a bottom-right fly-out card, they probably felt a bit like an <b>interruption</b> rather than timely, relevant help.
+            </p>
+           <p>On the content side, the help offer felt <b>generic</b> and a little cold. The value of expert connection also <b>wasn't clear enough</b>. What would customers get from connecting with an expert that they couldn't just get from ChatGPT in a fraction of the time?
+          </p>
+        </div>
+        <div class="column-image">
+          <a href={previousTestsImage.src} class="lightbox-link" target="_blank">
+            <Image src={previousTestsImage} alt="Previous test examples showing bottom-right flyout and top-right toast" width={600} densities={[1, 2]} />
+          </a>
+          <p class="image-caption">Previous tests: bottom-right flyout and top-right toast notifications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Strategy -->
+    <section class="case-study-section" id="strategy">
+      <h2 class="section-title">Creating a content strategy</h2>
+      <div class="two-column">
+        <div class="column-text">
+          <div class="prose-section">
+            <p>I focused on answering two questions: which customer data should inform the content, and how do we frame the help offer to make it feel worth the interruption? After an audit of previous work, here's where I landed:</p>
+          </div>
+
+          <div class="strategy-tiers">
+            <div class="strategy-tier">
+              <h3>1.<b> Where appropriate, speak to customer's bottom line</b></h3>
+              <p>
+                I prioritized life event data (like retiring, buying house, etc.) and refund-impacting data (dependents, filing status) because they're memorable, emotionally resonant, and give customers a concrete reason to engage: money in their pocket.
+              </p>
+              <div class="example-box">
+                <span class="example-label">Example</span>
+                <p>"You bought a home last year—congrats! An expert can help you see if this qualifies you for certain tax deductions and credits."</p>
+              </div>
+            </div>
+
+            <div class="strategy-tier">
+              <h3>2. <b>When that wasn't possible, evoke attentive, hands-on care</b></h3>
+              <p>
+                For screens where refund impact wasn't relevant, I shifted the framing to guidance and reassurance. Research showed customers worried about accuracy, so using specific phrases like "review it together," "walk you through it" would paint a clear picture of support.
+              </p>
+              <div class="example-box">
+                <span class="example-label">Example</span>
+                <p>"An expert can help you get all your income added, including what you earned as a [occupation] in [state]."</p>
+              </div>
+            </div>
+
+            <div class="strategy-tier">
+              <h3>3. <b>Remove contact barriers proactively</b></h3>
+              <p>
+                Previous tests showed customers needed to know help was immediate and included. Prioritizing space on the cards for "Available now" and "Included at no extra cost" would reassure them that reaching out wouldn't cost time or money.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column-image">
+          <a href={principlesImage.src} class="lightbox-link" target="_blank">
+            <Image src={principlesImage} alt="Content principles documentation" width={600} densities={[1, 2]} />
+          </a>
+          <p class="image-caption">Content principles I developed for the help offer messaging.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Collaboration & Iteration Challenge -->
+    <section class="case-study-section" id="ai-collaboration">
+      <div class="two-column">
+        <div class="column-text">
+          <h2 class="section-title">From fully prompted content...</h2>
+          <p>
+          We initially intended the help offer content to be <b>entirely AI-generated</b>. My job was to make sure the generated content sounded like TurboTax and made sense for each screen.
+          </p>
+          <p>
+            The AI team set me up with a custom tool (Amazon SageMaker backend) to iterate on prompts and evaluate model outputs. I used a <b>two level prompt system</b>: The first level applied to all help offer content across the project. The second prompt was adjusted to fit the context of individual screens.
+          </p>
+
+          <div class="inline-image">
+            <a href={twoLevelImage.src} class="lightbox-link" target="_blank">
+              <Image src={twoLevelImage} alt="Two-level prompt structure diagram" width={600} height={200} densities={[1, 2]} />
+            </a>
+            <p class="image-caption">I used a dual prompt system to guide the outputs for each screen.</p>
+          </div>
+        </div>
+        <div class="column-text">
+          <h2 class="section-title">...To AI-enabled templates</h2>
+          <p>
+            Even after multiple prompt iterations, the LLM struggled to consistently match TurboTax's nuanced voice. Some outputs were too formal. Some were awkwardly phrased. Some were overly casual.
+          </p>
+          <p>
+            Further iteration would've kept us from hitting our deadlines, so I made the decision to lean into templates that could guarantee the TurboTax sound and voice:
+          </p>
+          <ul class="bullet-list">
+            <li><b>I wrote base content variations manually</b> to ensure brand consistency.</li>
+            <li><b>The AI team configured the model</b> to follow my templates strictly.</li>
+            <li><b>AI would handle variable insertion at scale</b> and input customer data like occupation, state, life events, etc.</li>
+          </ul>
+          <div class="example-box">
+            <span class="example-label">What I'd do differently...</span>
+            <p>Today, this would be the perfect opportunity to systemize the help offer content. With a repository of exemplary offer messaging to feed our LLM, I think we could have come pretty close to hitting the right nuanced tone.</p>
+          </div>
+          <div class="inline-image">
+            <a href={templatesImage.src} class="lightbox-link" target="_blank">
+              <Image src={templatesImage} alt="AI-enabled template structure showing variable insertion" width={600} densities={[1, 2]} />
+            </a>
+            <p class="image-caption">A sample of the templates I wrote, plus data variables that our model would insert.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Personalization Tiers -->
+    <section class="case-study-section">
+      <h2 class="section-title">Edge-case handling</h2>
+      <div class="prose-section">
+        <p>
+          Once we settled on template-tizing the content, I needed to determine how to handle cases where customer data was limited. I mapped out a tiered personalization hierarchy that ensured every customer would get a proactive, relevant help offer, even when we didn't have specific data for them. 
+        </p>
+      </div>
+
+      <div class="tiers-grid">
+        <div class="tier-card">
+          <span class="tier-number">1</span>
+          <span class="tier-name">Full personalization (life event data)</span>
+          <p class="tier-example">"Your employment changed this year—we're here to help. An expert can walk you through any unemployment income and stock sales."</p>
+        </div>
+        <div class="tier-card">
+          <span class="tier-number">2</span>
+          <span class="tier-name">Partial personalization (customer attributes)</span>
+          <p class="tier-example">"An expert can help you get all your income added, including what you earned as a [teacher] in [California]."</p>
+        </div>
+        <div class="tier-card">
+          <span class="tier-number">3</span>
+          <span class="tier-name">Static fallback (no data)</span>
+          <p class="tier-example">"An expert can help you go through your income and explain how it'll impact your taxes this year."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testing -->
+    <section class="case-study-section">
+      <h2 class="section-title">Testing in product, learning fast</h2>
+      <div class="two-column">
+        <div class="column-text">
+          <p>
+           We launched a series of in-product tests to gather insights quickly, validate or disprove our hypotheses, and help shape the trajectory of the work.
+          </p>
+          <p>
+            We identified 6 unique, high-abandonment screens to test on, and I designed three content variants to help answer key strategic questions:
+          </p>
+          <ul class="bullet-list">
+            <li><strong>What type of help do customers actually want?</strong> ("Self-serve" help content would test whether customers just wanted quick access to information vs. human connection)</li>
+            <li><strong>Does personalization meaningfully increase engagement?</strong> (And would the lift justify the engineering complexity and cost?)</li>
+            <li><strong>What kind of framing resonates most?</strong> (Speaking to bottom line? Contextual guidance? Hand-holding?)</li>
+          </ul>
+
+          <h3 class="subsection-title">Test results</h3>
+          <p>
+            Personalized content outperformed both static content and self-serve content (+3.5x CTR). 
+          </p>
+          <p>
+            Refund, deduction, and credit-focused content was most successful, but we saw green shoots in content that offered guidance and hand-holding as well.
+          </p>
+          <p>
+            Moving forward, we rolled out the help widget to 6 more screens, optimized impression frequency and targeting, and abandoned self-serve content.
+          <p>
+            This work was <strong>moved to baseline early March 2025,</strong> becoming the default experience for TurboTax Live Assisted customers.
+          </p>
+        </div>
+        <div class="column-image">
+          <a href={variantsImage.src} class="lightbox-link" target="_blank">
+            <Image src={variantsImage} alt="Testing variants showing generic, personalized, and self-serve content" width={600} densities={[1, 2]} />
+          </a>
+          <p class="image-caption">Testing variants: generic content, personalized content, and self-serve help.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="case-study-section" id="impact">
+      <h2 class="section-title">End-of-season outcomes and impact</h2>
+      <div class="prose-section">
+        <p>
+          With our system of contextual, AI-personalized intervention cards that appeared at the bottom of high-anxiety screens throughout the filing experience, we achieved:
+        </p>
+      </div>
+
+      <div class="impact-columns">
+        <div class="impact-column">
+          <h3>Business impact</h3>
+          <ul class="bullet-list">
+            <li><strong>$5M</strong> in annualized revenue, becoming ROI-positive</li>
+            <li>Increased revenue from <strong>new</strong> customers</li>
+            <li>Higher franchise conversion: <strong>100.5 ITC</strong> (Index to control)</li>
+          </ul>
+        </div>
+        <div class="impact-column">
+          <h3>Customer experience improvements</h3>
+          <ul class="bullet-list">
+            <li><strong>7% increase</strong> in customer resolution rate (89% vs. 73% overall)</li>
+            <li>Contact rate increased to <strong>103.7 ITC</strong>, indicating customers were more willing to reach out when help felt relevant</li>
+            <li>Improved "Useful" click-through rate: <strong>190 ITC</strong></li>
+            <li><strong>15% increase</strong> in tNPS (Transactional Net Promoter Score)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reflections -->
+    <section class="case-study-section accent-bg">
+      <h2 class="section-title">Reflections</h2>
+      <div class="prose-section">
+        <p>
+          Truthfully, our expert utilization problem would best be served by a multi-faceted solution: better top-of-funnel benefit education, improved feature discoverability, and a systems-level reimagining of the expert contact framework (that came later!). But we learned a lot about how to better connect customers to our powerful expert-help benefit. The ROI-positive $5M revenue win didn't hurt either. Our proactive intervention work was even rolled out to the Business Tax product, which I consulted on before leaving Intuit.
+        </p>
+      </div>
+    </section>
+
+  </article>
+</BaseLayout>
+
+<style>
+  .case-study {
+    max-width: 100%;
+  }
+
+  /* Hero - Clean, minimal */
+  .case-study-hero {
+    padding: var(--space-16) 0 var(--space-12);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-16);
+  }
+
+  .case-study-hero-inner {
+    max-width: 100%;
+  }
+
+  .case-study-back {
+    font-size: 0.875rem;
+    margin-bottom: var(--space-8);
+    display: inline-block;
+    color: var(--color-muted);
+  }
+
+  .case-study-back:hover {
+    color: var(--color-text);
+    opacity: 1;
+  }
+
+  .case-study-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    margin-bottom: var(--space-3);
+  }
+
+  .case-study-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: var(--space-12);
+    color: var(--color-text);
+    max-width: 800px;
+    line-height: 1.2;
+  }
+
+  .case-study-meta-grid {
+    display: flex;
+    gap: var(--space-12);
+    margin-bottom: var(--space-8);
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .meta-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+  }
+
+  .meta-value {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+  }
+
+  /* Jump to nav */
+  .jump-to {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+    font-size: 0.8125rem;
+  }
+
+  .jump-to-label {
+    color: var(--color-muted);
+  }
+
+  .jump-to a {
+    color: var(--color-muted);
+    text-decoration: none;
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: all 0.15s ease;
+  }
+
+  .jump-to a:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+    opacity: 1;
+  }
+
+  /* Hero Image */
+  .case-study-hero-image {
+    margin-bottom: var(--space-20);
+  }
+
+  .case-study-hero-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  /* Sections - More breathing room */
+  .case-study-section {
+    padding: var(--space-16) 0;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: var(--space-6);
+  }
+
+  .subsection-title {
+    font-size: 1.125rem;
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  /* Prose - Clean, readable */
+  .prose-section {
+    max-width: 680px;
+  }
+
+  .prose-section p {
+    margin-bottom: var(--space-5);
+    line-height: 1.75;
+  }
+
+  .prose-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-4);
+  }
+
+  .numbered-list, .bullet-list {
+    margin: var(--space-4) 0 var(--space-6);
+    padding-left: var(--space-6);
+  }
+
+  .numbered-list li, .bullet-list li {
+    margin-bottom: var(--space-3);
+    line-height: 1.7;
+  }
+
+  /* Two column layout */
+  .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+  }
+
+  .column-text p {
+    margin-bottom: var(--space-5);
+    line-height: 1.75;
+  }
+
+  .column-image img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+  }
+
+  .lightbox-link {
+    display: block;
+    cursor: zoom-in;
+  }
+
+  .image-caption {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    margin-top: var(--space-3);
+    line-height: 1.5;
+  }
+
+  /* Strategy tiers */
+  .strategy-tiers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+    margin-top: var(--space-8);
+    max-width: 680px;
+  }
+
+  .strategy-tier h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    margin-bottom: var(--space-3);
+    font-weight: 400;
+  }
+
+  .strategy-tier p {
+    line-height: 1.75;
+    margin-bottom: var(--space-4);
+  }
+
+  /* Example boxes - Simple, minimal */
+  .example-box {
+    border-left: 2px solid var(--color-border);
+    padding: var(--space-4) 0 var(--space-4) var(--space-5);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-12);
+  }
+
+  .example-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+
+  .example-box p {
+    margin: 0;
+    font-style: italic;
+    color: var(--color-muted);
+    line-height: 1.6;
+  }
+
+  /* Callout boxes - Simplified */
+  .case-study-callout {
+    padding: var(--space-8) 0;
+    margin: var(--space-12) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .callout-title {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: var(--space-6);
+  }
+
+  .callout-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+
+  .callout-item strong {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-size: 0.9375rem;
+  }
+
+  .callout-item p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .callout-result {
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+  }
+
+  .callout-highlight {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  /* Tiers grid - Horizontal layout */
+  .tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+    margin: var(--space-12) 0 var(--space-12);
+  }
+
+  .tier-card {
+    padding: var(--space-5) 0;
+    border-top: 2px solid var(--color-border);
+  }
+
+  .tier-number {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-muted);
+    margin-bottom: var(--space-2);
+  }
+
+  .tier-name {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .tier-example {
+    font-style: italic;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--color-muted);
+    font-size: 0.875rem;
+  }
+
+  /* Impact columns */
+  .impact-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    margin: var(--space-8) 0;
+  }
+
+  .impact-column h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: var(--space-4);
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Accent background section - Very subtle */
+  .accent-bg {
+    border-top: 1px solid var(--color-border);
+    margin-left: calc(-1 * var(--space-6));
+    margin-right: calc(-1 * var(--space-6));
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+
+  /* Full-width image */
+  .full-width-image {
+    margin: var(--space-12) 0;
+  }
+
+  .full-width-image img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+  }
+
+  /* Inline image within column */
+  .inline-image {
+    margin-top: var(--space-8);
+  }
+
+  .inline-image img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .case-study-hero {
+      padding: var(--space-12) 0 var(--space-8);
+    }
+
+    .case-study-meta-grid {
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .case-study-metrics {
+      flex-wrap: wrap;
+      gap: var(--space-8);
+    }
+
+    .case-study-metric {
+      flex: 1 1 45%;
+    }
+
+    .tiers-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    .two-column {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+
+    .callout-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    .impact-columns {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+
+    .strategy-tiers,
+    .fallback-hierarchy,
+    .prose-section {
+      max-width: 100%;
+    }
+  }
+</style>

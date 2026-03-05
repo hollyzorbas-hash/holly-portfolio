@@ -1,0 +1,220 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import mainImage from '../../assets/projects/efr-after.png';
+import otherCopyImage from '../../assets/projects/efr-from-to.png';
+---
+
+<BaseLayout
+  title="Expert Final Review — Holly Zorbas"
+  description="Conversaion optimization and persuasize content resulting in $1.8M annualized revenue."
+>
+  <article class="mini-case-study">
+    <!-- Header -->
+    <header class="mini-header">
+      <a href="/#work" class="back-link">&larr; back to work</a>
+      <p class="project-label">TurboTax</p>
+      <h1>Expert Final Review</h1>
+      <p class="project-tagline">Testing persuasion strategies in upsell copy to drive expert review adoption.</p>
+    </header>
+
+    <!-- Two Column Layout -->
+    <div class="mini-layout">
+      <!-- Left: Sticky Image -->
+      <div class="mini-image-column">
+        <div class="mini-image-wrapper">
+          <Image src={mainImage} alt="Expert Final Review mobile screen" width={400} densities={[1, 2]} />
+        </div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="mini-content-column">
+        <section class="mini-section">
+          <h2>Context</h2>
+          <p>TurboTax Live Assisted offers customers the option to have a tax expert review their return with them before filing. The offer occurs on the same screen customer see their refund or balance due, but the existing copy wasn't effectively communicating the value of the service.</p>
+          <p>The challenge: how do we give customers a compelling reason to opt into expert review and help them understand it's included as part of the TT Live Assisted product?</p>
+        </section>
+
+        <section class="mini-section">
+          <h2>The fix</h2>
+<p><ul><li>Anchor on actual customer concerns that we know remain at this point of the filing experience 
+            <li>Overcome contact bias by reiterating that expert final review does not come at additional cost
+            <li>Highlight personalization-focused content, connecting to the customer's situation year-over-year
+          </ul>
+        </section>
+
+        <section class="mini-section">
+          <h2>My input</h2>
+          <ul>
+            <li>A/B tested copy variants with distinct persuasion angles</li>
+            <li>Collaborated with product and research to define success metrics</li>
+            <li>Analyzed results segmented by customer type (new vs. returning)</li>
+          </ul>
+        </section>
+
+        <section class="mini-section">
+          <h2>Impact</h2>
+          <p><strong>$2M annualized revenue</strong> from the winning variant.</p>
+          <p>The year-over-year "life changes" framing resonated most strongly, giving customers a concrete reason to feel reassured about their return. New customers showed even stronger response rates — the expert review experience aligned with what they expected from an assisted tax experience.</p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Full Width Image -->
+    <div class="full-width-image">
+      <Image src={otherCopyImage} alt="Copy variants comparison" width={1200} densities={[1, 2]} />
+      <p class="image-caption">Testing different persuasion strategies across copy variants.</p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .mini-case-study {
+    max-width: 100%;
+  }
+
+  /* Header */
+  .mini-header {
+    padding: var(--space-12) 0 var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-12);
+  }
+
+  .back-link {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    display: inline-block;
+    margin-bottom: var(--space-6);
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+    opacity: 1;
+  }
+
+  .project-label {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    margin-bottom: var(--space-2);
+  }
+
+  .mini-header h1 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    margin-bottom: var(--space-3);
+    line-height: 1.2;
+  }
+
+  .project-tagline {
+    font-size: 1rem;
+    color: var(--color-muted);
+    max-width: 500px;
+    line-height: 1.6;
+  }
+
+  /* Two Column Layout */
+  .mini-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  /* Left Column - Sticky Image */
+  .mini-image-column {
+    position: sticky;
+    top: var(--space-8);
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Sticky Image */
+  .mini-image-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    max-width: 360px;
+  }
+
+  .mini-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Full Width Image */
+  .full-width-image {
+    margin-top: var(--space-12);
+  }
+
+  .full-width-image img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+  }
+
+  .image-caption {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    margin-top: var(--space-3);
+    line-height: 1.5;
+  }
+
+  /* Right Column - Content */
+  .mini-content-column {
+    padding-bottom: var(--space-16);
+  }
+
+  .mini-section {
+    margin-bottom: var(--space-12);
+  }
+
+  .mini-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .mini-section h2 {
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: var(--space-6);
+  }
+
+  .mini-section p {
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+  }
+
+  .mini-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .mini-section ul {
+    margin: var(--space-4) 0 var(--space-6);
+    padding-left: var(--space-8);
+    line-height: 1.7;
+  }
+
+  .mini-section ul li {
+    margin-bottom: var(--space-3);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .mini-layout {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+
+    .mini-image-column {
+      position: relative;
+      top: 0;
+    }
+
+    .image-placeholder {
+      aspect-ratio: 16 / 10;
+    }
+  }
+</style>

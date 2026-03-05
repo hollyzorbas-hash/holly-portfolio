@@ -1,0 +1,511 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/projects/cktax-voice-tone.png';
+import dosdontsImage from '../../assets/projects/cktax-dos-donts.png';
+import lifecycleImage from '../../assets/projects/cktax-financial-lifecycle.png';
+import auditImage from '../../assets/projects/cktax-competitive-audit.png';
+---
+
+<BaseLayout
+  title="CKTax Voice & Tone — Holly Zorbas"
+  description="A comprehensive voice, tone, and content principles system for Intuit's Credit Karma Tax product."
+>
+  <article class="case-study">
+    <!-- Hero -->
+    <header class="case-study-hero">
+      <a href="/#work" class="case-study-back">&larr; back to work</a>
+      <p class="case-study-name">CKTax Voice & Tone</p>
+      <h1>Building a content identity for a hybrid product caught between two brands</h1>
+
+      <!-- Metadata -->
+      <div class="case-study-meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Content Designer (1 of 2)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Team</span>
+          <span class="meta-value">Design, Marketing, Legal, Leadership</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <span class="meta-value">3 Months</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Company</span>
+          <span class="meta-value">Intuit (Credit Karma, TurboTax)</span>
+        </div>
+      </div>
+
+      <!-- Jump to -->
+      <nav class="jump-to">
+        <span class="jump-to-label">Jump to:</span>
+        <a href="#approach">My approach</a>
+        <a href="#framework">Framework</a>
+        <a href="#impact">Impact</a>
+      </nav>
+    </header>
+
+    <!-- Challenge + My Role -->
+    <section class="case-study-section">
+      <div class="two-column">
+        <div class="column-text">
+          <h2 class="section-title">The challenge</h2>
+          <p>
+            Credit Karma Tax was a <b>new, hybrid product</b>: TurboTax-enabled tax filing inside the Credit Karma platform. I was part of a small team tasked with creating the content principles and design system for this new product. But what would it actually sound like?
+          </p>
+          <p>
+            We needed to <b>craft a verbal identity</b> that would meet CK's audience where they where. They'd be less familiar with tax concepts than TurboTax folks, more price-anxious, and less likely to trust a non-tax platform with a high-stakes task.
+          </p>
+        </div>
+        <div class="column-text">
+          <h2 class="section-title">My role</h2>
+          <p>
+            I worked with a lead content designer to co-author the voice, tone, and content principles from scratch, including a competitive audit, cross-functional workshops, and final documentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="case-study-section" id="approach">
+      <h2 class="section-title">Our process</h2>
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h3>Understand the audience</h3>
+          <p>Reviewed extensive research on the CK audience and sub-groups within it to clarify needs, wants, values and opportunities.</p>
+        </div>
+        <div class="approach-item">
+          <h3>Narrow on framing</h3>
+         <p>Analyzed voice across Intuit sub-brands (Credit Karma, TurboTax, QuickBooks, Mailchimp) to find opportunities for deviation and alignment.
+        </div>
+        <div class="approach-item">
+          <h3>Define voice and tone princples</h3>
+          <p>Crafted our voice and mapped out tone considerations, dos and donts for different points in the filing process.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Understanding the CK Audience -->
+    <section class="case-study-section">
+      <h2 class="section-title">Understanding the CK audience</h2>
+      <div class="two-column">
+        <div class="column-text">
+          <p>
+           We were able to use existing research on the CK audience as a jumping-off point, including a financial wellness lifecycle model that ties content strategy to where someone is in their financial life:</p>
+          <div class="lifecycle-grid">
+            <div class="lifecycle-item">
+              <span class="lifecycle-stage">Slipping Backwards</span>
+              <span class="lifecycle-need">In crisis, needs reassurance</span>
+            </div>
+            <div class="lifecycle-item">
+              <span class="lifecycle-stage">Staying Afloat</span>
+              <span class="lifecycle-need">Managing, needs simplicity</span>
+            </div>
+            <div class="lifecycle-item">
+              <span class="lifecycle-stage">Building Momentum</span>
+              <span class="lifecycle-need">Growing, needs guidance</span>
+            </div>
+            <div class="lifecycle-item">
+              <span class="lifecycle-stage">Navigating Opportunity</span>
+              <span class="lifecycle-need">Thriving, needs sophistication</span>
+            </div>
+          </div>
+          <hr class="section-divider" />
+          <p>With this framework, we started to ideate on <b>how to build trust with and empower</b> these subgroups, and what to avoid.</p>
+          <p>Common themes among the subgroups helped us understand what should be made a Bonafide Principle. Some things we felt strongly about:</p>
+          <ul>
+            <li><b>They value a personalized experience</b>, no one-size-fits-all stuff.</li>
+            <li><b>They want simplicity</b>, but are not to be underestimated. [Meaning, no jargon, but don't dumb things down.] </li>
+            <li><b>They need more clarity</b>, and fewer surprises.</li>
+          </ul>
+        </div>
+        <div class="column-image">
+          <a href={lifecycleImage.src} class="lightbox-link" target="_blank">
+            <Image src={lifecycleImage} alt="Financial wellness lifecycle model" width={600} densities={[1, 2]} />
+          </a>
+          <p class="image-caption">Dos/Donts for each lifecycle group</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clarifying the CK Voice -->
+    <section class="case-study-section">
+      <h2 class="section-title">Narrowing in with a competitive audit</h2>
+      <div class="two-column">
+        <div class="column-text">
+          <p>Once we had a good grasp of our audience, I designed and conducted a competitive audit across Intuit's sub-brands (Credit Karma, TurboTax, QuickBooks, and Mailchimp) and outside competitors like CashApp Tax to <b>map out areas of divergence and alignment</b> with CK's audience in mind. </p>
+          <p>Intuit brands shared a few instincts:</p>
+          <ul>
+            <li>Elevate the benefit</li>
+            <li>Empower the customer</li>
+            <li>Keep things simple</li>
+          </ul>
+        </div>
+        <div class="column-text">
+          <p>These were strong beats that we wanted to adopt. But some elements of the other brands wouldn't work for CKTax. TurboTax's empathetic commentary could sometimes feel patronizing and unearned, and CKTax needed a warmth that felt more <b>subdued and practical</b> to build trust. </p>
+          <p>We'd also want to avoid the sensationalized benefit language where possible. Marketing-ified claims about filing speed and cost often seen in TurboTax would amplify distrust for CK folks. We needed to <b>lead with transparency</b>.</p>
+        </div>
+      </div>
+      <hr class="section-divider" />
+      <div class="full-width-image">
+        <a href={auditImage.src} class="lightbox-link" target="_blank">
+          <Image src={auditImage} alt="Competitive audit across Intuit sub-brands" width={1200} densities={[1, 2]} />
+        </a>
+        <p class="image-caption">Competitive audit analyzing voice across Intuit sub-brands.</p>
+      </div>
+    </section>
+
+    <!-- What I Built -->
+    <section class="case-study-section" id="framework">
+      <h2 class="section-title">Defining the verbal identity</h2>
+      <div class="two-column">
+        <div class="column-text">
+          <p>
+From audit insights, we could finalize our Dos, Dont's and Content Princples.</p>
+<p>Over-celebration → <b>Don't over-empathize</b>.</p>
+<p>Excessive encouragement and whimsy registered as patronizing for an audience that's anxious about accuracy. Our goal was to earn the celebration, not manufacture it.</p>      
+<p>Benefit credibility → <b>Elevate the benefits, but don't oversell</b>.</p>
+<p>Several brands defaulted to superlatives and vague urgency ("instant refund," "file in 60 seconds"). CK's audience was already skeptical of financial promises that didn't deliver.</p>
+<p>Jargon vs. clarity → <b>Make taxes less intimidating</b>.</p> 
+<p>Many tax products used terminology as a credibility signal. But CKTax's audience, potentially first-time digital filers, CPA switchers, responded better to what something meant for them personally.</p>
+<p>Data transparency → <b>Use data to make the experience personal</b>.</p> 
+<p>CKTax was intended to be a highly personalized experience, using CK's member details to inform their tax filing. However, customers didn't fully understand the CK/TT relationship. Using their data without transparency could feel invasive, so we would ground personalization in playback and clarity.</p>
+
+          </p>
+          <div class="key-insight">
+            <span class="insight-label">Key insight</span>
+            <p>These docs acted as more than a style guide, they told people who CKTax was and how we were positioning ourselves in the tax landscape. We were an antitode to overly technical products, we'd win on transparency where others obscure, and we're for people who don't identify as "tax people". </p>
+</p>
+          </div>
+        </div>
+        <div class="column-image">
+          <a href={dosdontsImage.src} class="lightbox-link" target="_blank">
+            <Image src={dosdontsImage} alt="Do's and don'ts content guidelines" width={600} densities={[1, 2]} />
+          </a>
+          <p class="image-caption">Do/don't guidelines grounded in real product copy.</p>
+        </div>
+      </div>
+      <hr class="section-divider" />
+      <div class="full-width-image">
+        <a href={heroImage.src} class="lightbox-link" target="_blank">
+          <Image src={heroImage} alt="CKTax content principles overview" width={1200} densities={[1, 2]} />
+        </a>
+        <p class="image-caption">Content principles system overview for Credit Karma Tax.</p>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="case-study-section" id="impact">
+      <h2 class="section-title">Impact</h2>
+      <div class="prose-section">
+      <p>
+        CKTax was ultimately discontinued [sad trombone sound] due to business performance factors outside the scope of this work. The cost of running a separate tax product inside Credit Karma didn't justify the investment. However, the content system itself became the working standard for the team during its operation, and the psychological barriers framework was used to inform design decisions across the experience.
+        </p>
+      </div>
+    </section>
+
+  </article>
+</BaseLayout>
+
+<style>
+  .case-study {
+    max-width: 100%;
+  }
+
+  /* Hero - Clean, minimal */
+  .case-study-hero {
+    padding: var(--space-16) 0 var(--space-12);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-16);
+  }
+
+  .case-study-back {
+    font-size: 0.875rem;
+    margin-bottom: var(--space-8);
+    display: inline-block;
+    color: var(--color-muted);
+  }
+
+  .case-study-back:hover {
+    color: var(--color-text);
+    opacity: 1;
+  }
+
+  .case-study-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    margin-bottom: var(--space-3);
+  }
+
+  .case-study-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: var(--space-12);
+    color: var(--color-text);
+    max-width: 800px;
+    line-height: 1.2;
+  }
+
+  .case-study-meta-grid {
+    display: flex;
+    gap: var(--space-12);
+    margin-bottom: var(--space-8);
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .meta-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+  }
+
+  .meta-value {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+  }
+
+  /* Jump to nav */
+  .jump-to {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+    font-size: 0.8125rem;
+  }
+
+  .jump-to-label {
+    color: var(--color-muted);
+  }
+
+  .jump-to a {
+    color: var(--color-muted);
+    text-decoration: none;
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: all 0.15s ease;
+  }
+
+  .jump-to a:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+    opacity: 1;
+  }
+
+  /* Hero Image */
+  .case-study-hero-image {
+    margin-bottom: var(--space-20);
+  }
+
+  .case-study-hero-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  /* Sections */
+  .case-study-section {
+    padding: var(--space-16) 0;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--space-6);
+  }
+
+  /* Prose */
+  .prose-section {
+    max-width: 680px;
+  }
+
+  .prose-section p {
+    margin-bottom: var(--space-5);
+    line-height: 1.75;
+  }
+
+  /* Two column layout */
+  .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+  }
+
+  .column-text p {
+    margin-bottom: var(--space-5);
+    line-height: 1.75;
+  }
+
+  .column-text ul {
+    margin-left: var(--space-6);
+    margin-bottom: var(--space-5);
+    line-height: 1.75;
+  }
+
+  .column-text ul li {
+    margin-bottom: var(--space-2);
+    padding-left: var(--space-2);
+  }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: var(--space-6) 0;
+  }
+
+  .column-image img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+  }
+
+  .lightbox-link {
+    display: block;
+    cursor: zoom-in;
+  }
+
+  .image-caption {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    margin-top: var(--space-3);
+    line-height: 1.5;
+  }
+
+  /* Approach grid */
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+  }
+
+  .approach-item {
+    padding-top: var(--space-4);
+    border-top: 2px solid var(--color-border);
+  }
+
+  .approach-item h3 {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+  }
+
+  .approach-item p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Key insight */
+  .key-insight {
+    border-left: 2px solid var(--color-border);
+    padding: var(--space-4) 0 var(--space-4) var(--space-5);
+    margin-top: var(--space-8);
+  }
+
+  .insight-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+
+  .key-insight p {
+    margin: 0;
+    font-style: italic;
+    color: var(--color-muted);
+    line-height: 1.6;
+  }
+
+  /* Lifecycle grid */
+  .lifecycle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .lifecycle-item {
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+  }
+
+  .lifecycle-stage {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    margin-bottom: var(--space-1);
+  }
+
+  .lifecycle-need {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+  }
+
+  /* Impact list */
+  .impact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .impact-list li {
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--color-border);
+    line-height: 1.6;
+  }
+
+  .impact-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .case-study-hero {
+      padding: var(--space-12) 0 var(--space-8);
+    }
+
+    .case-study-meta-grid {
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .jump-to {
+      flex-wrap: wrap;
+    }
+
+    .two-column {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+
+    .approach-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    .lifecycle-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .prose-section {
+      max-width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo-link">
+    <Image src={logo} alt="Holly Zorbas" width={48} height={48} class="nav-logo" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#work" aria-current={currentPath === '/' ? 'page' : undefined}>work</a></li>
+    <li><a href="/about" aria-current={currentPath === '/about' ? 'page' : undefined}>about</a></li>
+    <li><a href="/about#contact">contact</a></li>
+  </ul>
+</nav>
