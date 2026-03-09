@@ -32,6 +32,36 @@ const quickWins = [
   { slug: 'ckm-heartbreakers', title: 'Deposit Retention Modal', company: 'Credit Karma Money', tagline: 'Comparison modal that saved product take rates from mid-funnel mind-changers.', skills: ['Experimentation', 'Conversion Optimization'], image: imgCkmHeartbreakers },
   { slug: 'splash-postfile', title: 'Cross-Product Landing Pages', company: 'Credit Karma Money', tagline: 'Cross-product landing page optimization — 2.6M churned members reactivated.', skills: ['Data-Driven Decisions', 'Conversion Optimization'], image: imgSplash },
 ];
+
+const editorialWork = [
+  {
+    title: '50/30/20 Budget Calculator',
+    description: 'Long-form personal finance explainer for a consumer audience. Covers the budgeting rule, how to adapt it, and when it breaks down — written to be readable, not just rankable.',
+    link: 'https://www.creditdonkey.com/50-30-20-calculator.html',
+    tag: 'Personal Finance · Editorial'
+  },
+  {
+    title: 'Emergency Fund Calculator',
+    description: 'Structured explainer for a multi-variable concept — breaks down how expenses, risk factors, and existing savings interact to determine the right fund size.',
+    link: 'https://www.creditdonkey.com/emergency-fund-calculator.html',
+    tag: 'Personal Finance · Editorial'
+  },
+];
+
+const earlierWork = [
+  {
+    title: 'Fundraiser Type Pages',
+    description: 'Web copy for five fundraiser category pages (Athletics, Celebration, Sale & Give Back, Backpacks, Other) — each tailored to a different donor motivation while staying consistent with the St. Baldrick\'s voice.',
+    image: 'stbaldricks-web-copy.png',
+    tag: 'Web Copy · Nonprofit'
+  },
+  {
+    title: 'FAQ & Program Copy',
+    description: 'Educational and FAQ copy explaining the foundation\'s programs and scavenger hunt initiative — written for a general audience including teachers, parents, and first-time donors.',
+    image: 'stbaldricks-faq.png',
+    tag: 'FAQ Copy · Nonprofit'
+  },
+];
 ---
 
 <BaseLayout title="Holly Zorbas — Senior Content Designer">
@@ -109,6 +139,46 @@ const quickWins = [
             <p class="project-card-tagline">{project.tagline}</p>
           </div>
         </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Editorial Roots -->
+  <section class="section section-supplementary" style="padding-top: 0;">
+    <p class="section-label">CreditDonkey · Personal Finance Editorial</p>
+    <h2 style="margin-bottom: var(--space-4);">editorial roots</h2>
+    <p class="section-intro">before content design, i spent a few years writing about personal finance for a consumer audience. here are two pieces that hold up.</p>
+    <div class="project-grid-editorial">
+      {editorialWork.map((item) => (
+        <a href={item.link} target="_blank" rel="noopener" class="project-card-editorial">
+          <div class="project-card-editorial-content">
+            <h3 class="project-card-title">{item.title}</h3>
+            <p class="project-card-tagline">{item.description}</p>
+            <p class="project-card-tag">{item.tag}</p>
+            <span class="project-card-link">Read article →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Earlier Work -->
+  <section class="section section-supplementary" style="padding-top: 0;">
+    <p class="section-label">St. Baldrick's Foundation · Web Copy & FAQ</p>
+    <h2 style="margin-bottom: var(--space-4);">earlier work</h2>
+    <p class="section-intro">nonprofit communications work from before my content design days — website copy and faq content for a childhood cancer research foundation.</p>
+    <div class="project-grid-visual project-grid-earlier">
+      {earlierWork.map((item) => (
+        <div class="project-card-visual project-card-static">
+          <div class="project-card-visual-image project-card-placeholder">
+            <span class="placeholder-text">screenshot coming soon</span>
+          </div>
+          <div class="project-card-visual-content">
+            <h3 class="project-card-title">{item.title}</h3>
+            <p class="project-card-tagline">{item.description}</p>
+            <p class="project-card-tag">{item.tag}</p>
+          </div>
+        </div>
       ))}
     </div>
   </section>
