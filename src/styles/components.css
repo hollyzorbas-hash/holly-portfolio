@@ -139,6 +139,29 @@
   line-height: 1.4;
 }
 
+.hero-outcome-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: opacity 0.15s ease;
+}
+
+.hero-outcome-link:hover {
+  opacity: 0.7;
+}
+
+.outcome-arrow {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.hero-outcome-link:hover .outcome-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* Featured Project Cards (horizontal with image) */
 .project-grid-featured {
   display: flex;

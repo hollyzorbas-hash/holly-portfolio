@@ -1,70 +1,91 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-// import projectImage from '../../assets/projects/st-baldricks.png';
+import imgLandingAfter from '../../assets/projects/sbf-landing-after.png';
+import imgLandingBefore from '../../assets/projects/sbf-landing-before.png';
+import imgFaq1 from '../../assets/projects/sbf-faq1.png';
+import imgFaq2 from '../../assets/projects/sbf-faq2.png';
+import imgFaq3 from '../../assets/projects/sbf-faq3.png';
 ---
 
 <BaseLayout
-  title="Nonprofit Copywriting — Holly Zorbas"
-  description="Copywriting for web and print at St. Baldrick's Foundation."
+  title="Nonprofit Web Copy & FAQ — Holly Zorbas"
+  description="Web copy and FAQ content for St. Baldrick's Foundation."
 >
-  <article class="mini-case-study">
+  <article class="earlier-work-page">
     <!-- Header -->
-    <header class="mini-header">
+    <header class="page-header">
       <a href="/#work" class="back-link">&larr; back to work</a>
       <p class="project-label">St. Baldrick's Foundation</p>
-      <h1>Nonprofit Copywriting for Web + Print</h1>
-      <p class="project-tagline">Copywriting for a childhood cancer research nonprofit.</p>
+      <h1>Nonprofit Web Copy & FAQ</h1>
     </header>
 
-    <!-- Two Column Layout -->
-    <div class="mini-layout">
-      <!-- Left: Sticky Image -->
-      <div class="mini-image-column">
-        <div class="mini-image-wrapper">
-          <!-- Uncomment when image is ready -->
-          <!-- <Image src={projectImage} alt="St. Baldrick's copywriting samples" width={500} densities={[1, 2]} /> -->
-          <div class="image-placeholder">Image coming soon</div>
+    <!-- Overview -->
+    <section class="overview">
+      <div class="overview-left">
+        <p>St. Baldrick's Foundation is a nonprofit that funds childhood cancer research grants. Their signature fundraising model, community events where people shave their heads in solidarity with cancer patients, built the organization's identity. But some supporters wanted to fundraise without braving the shave.</p>
+        <p>The Do What You Want (DWYW) program was created to address that need, but its direction and branding were a bit neglected. I pushed for a revamp to give it structure, rewrote the landing page copy, and created all-new FAQ copy so supporters could easily understand their options.</p>
+      </div>
+      <div class="overview-right">
+        <h2>My input</h2>
+        <ul>
+          <li>Analyzed all DWYW fundraiser data to create categories that helped the fundraiser specialists better serve volunteers with targeted resources</li>
+          <li>Rewrote landing page copy in a friendly, encouraging tone reflective of SBF's mission</li>
+          <li>Created a new FAQs section and wrote all FAQ copy to provide guidance and distinction from other SBF offerings</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Landing Page Section -->
+    <section class="work-section">
+      <h2>Landing Page Refresh</h2>
+      <p class="section-blurb">Rewrote the Do What You Want landing page to clarify the program's purpose and help supporters understand how their unique fundraising ideas fit into the organization's landscape.</p>
+      <div class="carousel-arrows" id="landing-carousel">
+        <button class="carousel-arrow carousel-arrow-left" aria-label="Previous slide">&larr;</button>
+        <div class="carousel-arrows-track">
+          <figure class="carousel-arrows-slide">
+            <Image src={imgLandingAfter} alt="Landing page after redesign" width={800} densities={[1, 2]} />
+            <figcaption>After</figcaption>
+          </figure>
+          <figure class="carousel-arrows-slide">
+            <Image src={imgLandingBefore} alt="Landing page before redesign" width={800} densities={[1, 2]} />
+            <figcaption>Before</figcaption>
+          </figure>
         </div>
+        <button class="carousel-arrow carousel-arrow-right" aria-label="Next slide">&rarr;</button>
       </div>
+    </section>
 
-      <!-- Right: Content -->
-      <div class="mini-content-column">
-        <section class="mini-section">
-          <h2>Context</h2>
-          <p>[Placeholder: What was the situation? What kind of content were you creating?]</p>
-        </section>
-
-        <section class="mini-section">
-          <h2>The fix</h2>
-          <p>[Placeholder: What was your approach? What channels did you write for?]</p>
-        </section>
-
-        <section class="mini-section">
-          <h2>My input</h2>
-          <ul>
-            <li>[Placeholder: Specific contribution 1]</li>
-            <li>[Placeholder: Specific contribution 2]</li>
-            <li>[Placeholder: Specific contribution 3]</li>
-          </ul>
-        </section>
-
-        <section class="mini-section">
-          <h2>Impact</h2>
-          <p>[Placeholder: What were the results? Any metrics or outcomes?]</p>
-        </section>
+    <!-- FAQ Section -->
+    <section class="work-section">
+      <h2>FAQ Copy</h2>
+      <p class="section-blurb">Created a new FAQs section from scratch: wrote all copy to provide guidance for potential fundraisers and distinguish DWYW from other SBF programs.</p>
+      <div class="carousel-arrows" id="faq-carousel">
+        <button class="carousel-arrow carousel-arrow-left" aria-label="Previous slide">&larr;</button>
+        <div class="carousel-arrows-track">
+          <figure class="carousel-arrows-slide">
+            <Image src={imgFaq1} alt="FAQ section 1" width={800} densities={[1, 2]} />
+          </figure>
+          <figure class="carousel-arrows-slide">
+            <Image src={imgFaq2} alt="FAQ section 2" width={800} densities={[1, 2]} />
+          </figure>
+          <figure class="carousel-arrows-slide">
+            <Image src={imgFaq3} alt="FAQ section 3" width={800} densities={[1, 2]} />
+          </figure>
+        </div>
+        <button class="carousel-arrow carousel-arrow-right" aria-label="Next slide">&rarr;</button>
       </div>
-    </div>
+    </section>
   </article>
 </BaseLayout>
 
 <style>
-  .mini-case-study {
+  .earlier-work-page {
     max-width: 100%;
   }
 
   /* Header */
-  .mini-header {
+  .page-header {
     padding: var(--space-12) 0 var(--space-8);
     border-bottom: 1px solid var(--color-border);
     margin-bottom: var(--space-12);
@@ -90,109 +111,236 @@ import { Image } from 'astro:assets';
     margin-bottom: var(--space-2);
   }
 
-  .mini-header h1 {
+  .page-header h1 {
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     margin-bottom: var(--space-3);
     line-height: 1.2;
   }
 
-  .project-tagline {
-    font-size: 1rem;
-    color: var(--color-muted);
-    max-width: 500px;
-    line-height: 1.6;
-  }
-
-  /* Two Column Layout */
-  .mini-layout {
+  /* Overview */
+  .overview {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-12);
-    align-items: start;
+    margin-bottom: var(--space-16);
   }
 
-  /* Left Column - Sticky Image */
-  .mini-image-column {
-    position: sticky;
-    top: var(--space-8);
+  .overview-left p {
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
   }
 
-  .mini-image-wrapper {
+  .overview-left p:last-child {
+    margin-bottom: 0;
+  }
+
+  .overview-right h2 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: var(--space-4);
+  }
+
+  .overview-right ul {
+    margin-left: var(--space-5);
+    line-height: 1.7;
+  }
+
+  .overview-right ul li {
+    margin-bottom: var(--space-3);
+  }
+
+  /* Work Sections */
+  .work-section {
+    margin-bottom: calc(var(--space-16) * 2);
+  }
+
+  .work-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: var(--space-3);
+  }
+
+  .section-blurb {
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+    max-width: 600px;
+  }
+
+  /* Carousel */
+  .carousel {
+    position: relative;
     border-radius: 8px;
-    overflow: hidden;
     border: 1px solid var(--color-border);
+    overflow: hidden;
   }
 
-  .mini-image-wrapper img {
+  .carousel-track {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .carousel-track::-webkit-scrollbar-track {
+    background: var(--color-accent);
+  }
+
+  .carousel-track::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+  }
+
+  .carousel-track::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted);
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    margin: 0;
+  }
+
+  .carousel-slide img {
     width: 100%;
     height: auto;
     display: block;
   }
 
-  .image-placeholder {
-    aspect-ratio: 3 / 4;
+  .carousel-slide figcaption {
+    padding: var(--space-3) var(--space-4);
+    font-size: 0.8125rem;
+    color: var(--color-muted);
     background: var(--color-accent);
+    text-align: center;
+  }
+
+  /* Arrow Carousel */
+  .carousel-arrows {
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  .carousel-arrows-track {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .carousel-arrows-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .carousel-arrows-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .carousel-arrows-slide figcaption {
+    padding: var(--space-3) var(--space-4);
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    background: var(--color-accent);
+    text-align: center;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-muted);
-    font-size: 0.875rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--color-text);
+    z-index: 10;
+    transition: background 0.2s, opacity 0.2s;
   }
 
-  /* Right Column - Content */
-  .mini-content-column {
-    padding-bottom: var(--space-16);
+  .carousel-arrow:hover {
+    background: var(--color-accent);
   }
 
-  .mini-section {
-    margin-bottom: var(--space-10);
+  .carousel-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
   }
 
-  .mini-section:last-child {
-    margin-bottom: 0;
+  .carousel-arrow-left {
+    left: var(--space-4);
   }
 
-  .mini-section h2 {
-    font-size: 0.8125rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-muted);
-    margin-bottom: var(--space-3);
-    font-weight: 500;
-  }
-
-  .mini-section p {
-    line-height: 1.7;
-    margin-bottom: var(--space-4);
-  }
-
-  .mini-section p:last-child {
-    margin-bottom: 0;
-  }
-
-  .mini-section ul {
-    margin-left: var(--space-5);
-    line-height: 1.7;
-  }
-
-  .mini-section ul li {
-    margin-bottom: var(--space-2);
+  .carousel-arrow-right {
+    right: var(--space-4);
   }
 
   /* Responsive */
   @media (max-width: 768px) {
-    .mini-layout {
+    .overview {
       grid-template-columns: 1fr;
       gap: var(--space-8);
     }
 
-    .mini-image-column {
-      position: relative;
-      top: 0;
-    }
-
-    .image-placeholder {
-      aspect-ratio: 16 / 10;
+    .carousel-arrow {
+      width: 32px;
+      height: 32px;
+      font-size: 0.875rem;
     }
   }
 </style>
+
+<script>
+  function initCarousel(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+
+    const track = carousel.querySelector('.carousel-arrows-track');
+    const slides = carousel.querySelectorAll('.carousel-arrows-slide');
+    const leftBtn = carousel.querySelector('.carousel-arrow-left');
+    const rightBtn = carousel.querySelector('.carousel-arrow-right');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      leftBtn.disabled = currentIndex === 0;
+      rightBtn.disabled = currentIndex === slides.length - 1;
+    }
+
+    leftBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    rightBtn.addEventListener('click', () => {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    updateCarousel();
+  }
+
+  initCarousel('landing-carousel');
+  initCarousel('faq-carousel');
+</script>
